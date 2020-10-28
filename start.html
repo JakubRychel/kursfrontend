@@ -27,7 +27,6 @@
             height: var(--navH);
             line-height: var(--navH);
             width: 100%;
-            z-index: 3;
         }
 
         header {
@@ -37,17 +36,15 @@
             height: calc(100vh - var(--navH));
             line-height: calc(100vh - var(--navH));
             width: 100%;
-            z-index: 1;
+            z-index: -1;
         }
 
         main {
-            position: absolute;
-            top: 100vh;
-            background-image: linear-gradient(45deg, );
+            margin-top: 100vh;
+            background-image: linear-gradient(45deg, green 0%, blue 40%, violet 70%, yellow 100%);
             height: 200vh;
+            line-height: 200vh;
             width: 100%;
-            z-index: 2;
-            vertical-align: ;
         }
 
     </style>
@@ -61,7 +58,7 @@
         Header - 90% wysokości okna
     </header>
     <main>
-        Główna zawartość - 100% wysokości okna
+        Główna zawartość - 200% wysokości okna
     </main>
 </body>
 
