@@ -25,7 +25,9 @@ Tekst ma być pod szachownicą.
         }
 
         .board {
-            margin: auto;
+            position: absolute;
+            top: calc(50vh - 15vw);
+            left: calc(50vw - 15vw);
             font-size: 0;
             width: 30vw;
             height: 30vw;
@@ -38,12 +40,17 @@ Tekst ma być pod szachownicą.
             height: 50%;
         }
         
-        span:nth-child(1), span:nth-child(4) {
+        span:nth-child(2), span:nth-child(3) {
             background-color: white;
         }
 
-        span:nth-child(2), span:nth-child(3) {
+        span:nth-child(1), span:nth-child(4) {
             background-color: red;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: calc(50vh + 15vw + 50px);
         }
 
     </style>
