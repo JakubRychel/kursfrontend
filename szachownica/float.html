@@ -1,16 +1,13 @@
 <!-- 
-Zrób szachownicę na 3 różne sposoby
-- wykorzystująć inline-block dla każdego pola
-- wykorzystująć float dla kązdego pola
-- wykorzystując position:absolute dla każdego pola
+Zrób szachownicę wykorzystująć float dla każdego pola
+Nie możesz określić wysokości div z klasą board (określi tylko szerokosć na 30vw)
 
-W zadaniu 1 zrób inline-block
+Wycentruj szachownicę tylko w poziomie. Szachownica ma być position static.
+Szachownica ma mieć 30% szerokości okna przeglądarki i dodatkowo border: 10px czarny.
 
-Dodatkowo wycentruj cały kontener (div z klasą 'board') i określ jego wielkości tak by był on kwadratem, który ma 30% szerokości okna przeglądarki i dodatkowo border: 10px czarny.
-
-Tekst ma być pod szachownicą.
-
+Tekst ma być pod szachownicą. Właściwość position h1 musi być static.
  -->
+
  <!DOCTYPE html>
  <html lang="en">
  
@@ -18,41 +15,39 @@ Tekst ma być pod szachownicą.
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>Szachownica Inline-block</title>
+     <title>Szachownica Float</title>
      <style>
-         * {
-             box-sizing: border-box;
-         }
- 
-         .board {
-             position: absolute;
-             top: calc(50vh - 15vw);
-             left: calc(50vw - 15vw);
-             font-size: 0;
-             width: 30vw;
-             height: 30vw;
-             border: 10px solid black;
-         }
- 
-         span {
-             float: left;
-             width: 50%;
-             height: 50%;
-         }
-         
-         span:nth-child(2), span:nth-child(3) {
-             background-color: white;
-         }
- 
-         span:nth-child(1), span:nth-child(4) {
-             background-color: red;
-         }
- 
-         h1{
-             text-align: center;
-             margin-top: calc(50vh + 15vw + 50px);
-         }
- 
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .board {
+            margin: auto;
+            border: 10px solid black;
+            width: 30vw;
+        }
+
+        .board::after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+
+        span {
+            height: calc(15vw - 10px);
+            width: 50%;
+            float: left;
+        }
+
+        span:nth-child(1), span:nth-child(4) {
+            background-color: red;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
      </style>
  </head>
  
