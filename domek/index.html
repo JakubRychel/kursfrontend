@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+
+        span {
+            display: inline-block;
+            margin: 50px;
+            padding: 10px;
+            background-color: brown;
+            color: white;
+            font-family: arial;
+
+        }
+
+        div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0px;
+            height: 0px;
+            transition: 1s;
+        }
+
+        div:nth-of-type(2) {
+            transition-delay: .1s;
+        }
+
+        div:nth-of-type(3) {
+            transition-delay: .2s;
+        }
+
+        div:nth-of-type(4) {
+            transition-delay: .3s;
+        }
+
+        div:nth-of-type(5) {
+            transition-delay: .4s;
+        }
+
+        div:nth-of-type(6) {
+            transition-delay: .5s;
+        }
+
+        span:hover ~ div:nth-of-type(1) {
+            bottom: 50%;
+            left: 50%;
+            width: 212px;
+            height: 212px;
+            background-color: black;
+            transform: translate(-50%, calc(+50% - 100px)) rotate(45deg);
+        }
+
+        span:hover ~ div:nth-of-type(2) {
+            bottom: 50%;
+            left: 50%;
+            width: 300px;
+            height: 200px;
+            background-color: brown;
+            transform: translate(-50%, +50%);
+        }
+
+        span:hover ~ div:nth-of-type(3) {
+            bottom: 50%;
+            left: 50%;
+            width: 30px;
+            height: 50px;
+            background-color: black;
+            transform: translate(calc(-50% + 80px), calc(+50% - 180px));
+        }
+
+        span:hover ~ div:nth-of-type(4) {
+            bottom: 50%;
+            left: 50%;
+            width: 70px;
+            height: 100px;
+            background-color: darkslategray;
+            transform: translate(-50%, calc(+50% + 50px));
+        }
+
+        span:hover ~ div:nth-of-type(5) {
+            bottom: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: darkgoldenrod;
+            transform: translate(calc(-50% - 80px), calc(+50%));
+        }
+
+        span:hover ~ div:nth-of-type(6) {
+            bottom: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: darkgoldenrod;
+            transform: translate(calc(-50% + 80px), calc(+50%));
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
